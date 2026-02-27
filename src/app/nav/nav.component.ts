@@ -35,6 +35,8 @@ export class NavComponent implements OnInit {
 
 
   onSubmit() {
+    console.log("clicked");
+    
     if (this.form.invalid) {
       this.form.markAllAsTouched();
     }

@@ -20,6 +20,8 @@ export class AccountService {
   constructor(private http: HttpClient , private presenceService:PresenceService) {}
 
   login(login: IRequestLogin) {
+    console.log("login");
+    console.log("this.baseUrl",this.baseUrl);
     
     return this.http.post<IUser>(`${this.baseUrl}/Account/login`, login).pipe(
       map((response: IUser) => {
